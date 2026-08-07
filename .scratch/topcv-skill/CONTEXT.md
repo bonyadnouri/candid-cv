@@ -34,6 +34,10 @@ _Avoid_: data directory, plugin data, storage
 The specific posting a CV is being generated against. Distinct from the Employer, which it may or may not name.
 _Avoid_: job description, JD, listing, posting
 
+**Parked Job Ad**:
+A Job Ad held across the first-run handoff — saved when a candidate asks for a CV before a Candidate Profile exists, so building the profile costs them the ad rather than losing it. Offered back once the profile is built, as a fresh round of Tailoring rather than a continuation.
+_Avoid_: pending job, queued ad, saved request
+
 **Employer**:
 The organization the candidate would actually work for. Deliberately distinct from whoever *posted* the Job Ad, which may be a staffing agency.
 _Avoid_: company, client
