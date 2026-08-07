@@ -1,0 +1,199 @@
+%----------------------------------------------------------------------------------------
+%  candid-cv — reference template (genericised from the user's own CV, 2026-08-05)
+%
+%  All personal data removed. Header fields are macros so content stays separate
+%  from layout; repeating sections carry neutral example entries.
+%
+%  ENGINE: pdfLaTeX. Do NOT compile with XeLaTeX or Tectonic — they corrupt the
+%  PDF text layer (see research/ats-reality.md). LuaLaTeX is also not recommended.
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%    PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage[T1]{fontenc}          % keeps ligatures extracting as plain ASCII
+\usepackage[utf8]{inputenc}
+\input{glyphtounicode}\pdfgentounicode=1   % forces a correct /ToUnicode map
+
+\usepackage{url}
+\usepackage{parskip}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.92, top=1cm, bottom=1cm]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{5pt}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+% \usepackage{fontawesome5}   % disabled — see the note above the title block
+
+%----------------------------------------------------------------------------------------
+%    FILL THESE IN
+%----------------------------------------------------------------------------------------
+\newcommand{\cvname}{Vorname Nachname}
+\newcommand{\cvheadline}{Professional Headline | Second Focus Area}
+\newcommand{\cvemail}{first.last@example.com}
+\newcommand{\cvphone}{0000 0000000}
+\newcommand{\cvphoneurl}{tel:+490000000000}
+\newcommand{\cvlocation}{City}
+
+% Date of birth: include for DE/AT/CH, OMIT for US/UK/most of the EU.
+% Market-dependent — see research/market-conventions.md. Comment out the line
+% in the header block below when targeting an Anglophone market.
+\newcommand{\cvdob}{TT.MM.JJJJ}
+
+% Section headings — swap to English when the target market calls for it.
+\newcommand{\headingprofile}{Profil}
+\newcommand{\headingexperience}{Berufserfahrung}
+\newcommand{\headingskills}{Kompetenzen}
+\newcommand{\headingeducation}{Ausbildung}
+
+%----------------------------------------------------------------------------------------
+%    ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[2pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[2pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0.5pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+%----------------------------------------------------------------------------------------
+%    BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%    TITLE
+%----------------------------------------------------------------------------------------
+
+% ⚠️ ICONS REMOVED DELIBERATELY — do not re-add without reading the note below.
+% FontAwesome glyphs have no usable /ToUnicode mapping. Measured on this exact
+% template, the icon version extracted as:
+%   pypdf      : /envel⌢pefirst.last@example.com| ♂¶obile0000 0000000| ♂¶ap-¶arkerCity
+%   pdfplumber : # first.last@example.com | H 0000 0000000 | * City
+% On pypdf the junk FUSES to the email address with no separator. This is the
+% highest-value line on the CV for any parser. Without icons it extracts cleanly
+% on all three extractors tested. Cosmetics are not worth corrupting the contact row.
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{\cvname} \\[5pt]
+\large{\textbf{\cvheadline}} \\[3pt]
+\href{mailto:\cvemail}{\cvemail} \ $|$ \
+\href{\cvphoneurl}{\cvphone} \ $|$ \
+\cvlocation \ $|$ \ \cvdob \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%    SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{\headingprofile}
+Two to four sentences positioning the candidate for this specific role. State years of
+experience, the two or three domains that matter most for the target job, and the
+concrete systems or methods the ad asks for. No adjectives that cannot be evidenced
+further down.
+
+%----------------------------------------------------------------------------------------
+%    EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{\headingexperience}
+
+\begin{joblong}{Role Title — Employer Name}{MM/JJJJ - heute}
+\item Achievement or responsibility, phrased in the vocabulary the target ad uses
+\item Scope indicator — volume, team size, systems owned, budget where genuinely known
+\item Outcome with a number where a real one exists; qualitative where it does not
+\item Cross-functional work, named by the function rather than generically
+\item Ownership statement matching the candidate's actual level of involvement
+\end{joblong}
+
+\begin{joblong}{Role Title — Employer Name}{MM/JJJJ - MM/JJJJ}
+\item Achievement or responsibility
+\item Scope indicator
+\item Outcome
+\item Collaboration or process contribution
+\end{joblong}
+
+\begin{joblong}{Role Title — Employer Name}{MM/JJJJ - MM/JJJJ}
+\item Achievement or responsibility
+\item Named systems or tools actually used
+\item Outcome or process improvement
+\end{joblong}
+
+% Older or less relevant roles can drop to \begin{jobshort}{...}{...}\end{jobshort}
+% (title and dates only, no bullets) to protect the one-page budget.
+
+%----------------------------------------------------------------------------------------
+%    SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{\headingskills}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Competence Area} & Specific skill | Specific skill | Specific skill | Specific skill \\
+
+\textbf{Competence Area} & Specific skill | Specific skill | Specific skill \\
+
+\textbf{Systems / Tools} & Named system | Named system | Named system \\
+
+\textbf{Working Style} & Trait | Trait | Trait \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%    EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{\headingeducation}
+
+\begin{tabularx}{\linewidth}{@{}l X r@{}}
+\textbf{Qualification} & Institution & MM/JJJJ - MM/JJJJ \\
+\end{tabularx}
+\vspace{-2mm}
+{\small One-line description of the qualification and its focus, where it adds something.}
+
+% CONDITIONAL SECTIONS — add only when the role calls for them:
+%   Portfolio link (design roles), Publications (academic/legal),
+%   Bar admission (legal), Certifications, Languages.
+
+\vfill
+\center{\footnotesize Optional single closing line, tailored to the target employer.}
+
+\end{document}

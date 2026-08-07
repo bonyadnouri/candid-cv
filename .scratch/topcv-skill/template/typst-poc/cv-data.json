@@ -1,0 +1,104 @@
+{
+  "market": "DE",
+  "name": "Vorname Nachname",
+  "headline": "Senior Data Engineer | Analytics Platforms",
+  "contact": [
+    "first.last@example.com",
+    "0000 0000000",
+    "Berlin"
+  ],
+  "dob": "01.01.1990",
+  "headings": {
+    "profile": "Profil",
+    "experience": "Berufserfahrung",
+    "skills": "Kompetenzen",
+    "education": "Ausbildung"
+  },
+  "profile": "Data Engineer mit acht Jahren Erfahrung im Aufbau von Batch- und Streaming-Pipelines. Schwerpunkt auf Airflow, dbt und Snowflake in regulierten Umgebungen.",
+  "experience": [
+    {
+      "role": "Senior Data Engineer",
+      "employer": "Acme GmbH",
+      "dates": "05/2021 – heute",
+      "bullets": [
+        "Baute die Event-Pipeline für 40 Mio. Events täglich",
+        "Führte ein Team von fünf Entwicklern",
+        "Migrierte das Warehouse nach Snowflake"
+      ]
+    },
+    {
+      "role": "Data Engineer",
+      "employer": "Beispiel AG",
+      "dates": "03/2018 – 04/2021",
+      "bullets": [
+        "Migrierte Legacy-ETL nach Airflow",
+        "Etablierte Code Review und Testabdeckung"
+      ]
+    },
+    {
+      "role": "Werkstudent Datenanalyse",
+      "employer": "Muster KG",
+      "dates": "09/2016 – 02/2018",
+      "bullets": []
+    }
+  ],
+  "skills": [
+    {
+      "label": "Data Engineering",
+      "values": [
+        "Airflow",
+        "dbt",
+        "Snowflake",
+        "Kafka"
+      ]
+    },
+    {
+      "label": "Programmiersprachen",
+      "values": [
+        "Python",
+        "SQL",
+        "Scala"
+      ]
+    },
+    {
+      "label": "Cloud & Tools",
+      "values": [
+        "AWS",
+        "Terraform",
+        "Docker"
+      ]
+    },
+    {
+      "label": "Arbeitsweise",
+      "values": [
+        "Scrum",
+        "Code Review",
+        "Mentoring"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "qualification": "M.Sc. Informatik",
+      "institution": "TU Berlin",
+      "dates": "10/2014 – 08/2016",
+      "note": "Schwerpunkt verteilte Systeme"
+    }
+  ],
+  "photo": null,
+  "certifications": [
+    "AWS Solutions Architect Associate (2023)"
+  ],
+  "languages": [
+    "Deutsch (Muttersprache)",
+    "Englisch (C1)"
+  ],
+  "additional": [
+    {
+      "title": "Ehrenamt",
+      "items": [
+        "Vorstand, Code für Berlin e.V., 2019 – heute"
+      ]
+    }
+  ]
+}
