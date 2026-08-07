@@ -7,12 +7,28 @@ The domain of generating a job-specific, honestly-optimized CV from durable know
 ## Language
 
 **Candidate Profile**:
-The durable, job-independent record of everything known about the candidate — experience, projects, education, links. Owned by the candidate, outlives any single application.
+The durable, job-independent record of everything known about the candidate — an Identity Block plus Entries holding Profile Atoms. Owned by the candidate, outlives any single application.
 _Avoid_: résumé data, user data, master CV
 
+**Identity Block**:
+The non-selectable part of the Candidate Profile — name, contact, links, spoken languages, and market-conditional facts like date of birth and photo — rendered as-is rather than tailored.
+_Avoid_: personal details, header, contact block
+
+**Entry**:
+One span of the career within the Candidate Profile — a role, project, degree, certification, or volunteer position — holding the skeleton facts (title, organization, dates) that render verbatim, plus its Profile Atoms.
+_Avoid_: position, experience item, section
+
 **Profile Atom**:
-A single independently-selectable fact within the Candidate Profile — one achievement, one project, one responsibility — held as raw fact rather than as pre-written CV prose. Shape pending *Where does the Candidate Profile live, and what shape is it?*
+A single independently-selectable fact within an Entry — one achievement, one responsibility, one competence — held as raw prose plus tags for what it demonstrates, optionally the candidate's verbatim words and an evidence pointer. Numbers and uncertainty live in the wording of the fact itself, and a skill may appear on a CV only if atoms demonstrate it.
 _Avoid_: bullet, entry, item
+
+**Competence Atom**:
+A Profile Atom recording sustained everyday use of a tool or practice rather than a discrete achievement — created when the candidate claims a skill with no story attached, so every claimed skill stays evidence-backed.
+_Avoid_: skill entry, proficiency
+
+**Profile Home**:
+The `~/.candid-cv/` directory that owns all candidate PII — the Candidate Profile and every generated output. The structural privacy boundary: PII-bearing writes never land anywhere else.
+_Avoid_: data directory, plugin data, storage
 
 **Job Ad**:
 The specific posting a CV is being generated against. Distinct from the Employer, which it may or may not name.
