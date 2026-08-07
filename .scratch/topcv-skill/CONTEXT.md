@@ -54,13 +54,21 @@ _Avoid_: import, parsing, onboarding
 The conversational session that fills gaps Ingestion left in the Candidate Profile. Not to be confused with a job interview.
 _Avoid_: grilling, questionnaire, intake
 
+**Elicitation**:
+A single open question asked mid-flow — during Tailoring or verification — that mints a new Profile Atom instead of guessing: asking for a number, a role's real scope, a missing competence. Open means never proposing the answer, so the atom records the candidate's memory rather than the agent's anchor; the answer lands in the profile before any CV cites it.
+_Avoid_: follow-up question, clarification, probing
+
 **Tailoring**:
 Producing the content of one CV by selecting Profile Atoms against a Job Ad and rephrasing them within the Honest Optimization rule.
 _Avoid_: optimization, customization, generation
 
 **Honest Optimization**:
-The governing constraint: selection and framing may be optimized, facts may not be invented or inflated. Every claim on a generated CV traces to something the candidate supplied. Boundary pending *What exactly does "honest optimization" forbid?*
+The governing constraint: selection and framing may be optimized, facts may not be invented or inflated. Every claim on a generated CV must be supported by its linked Profile Atoms at the claim's strongest natural reading — or carry a Marked Override — and the rendered document says the same thing to every reader, human or machine. On a too-weak atom the only moves are weakening the claim, Elicitation, or a Marked Override. Boundary settled by *What exactly does "honest optimization" forbid?*
 _Avoid_: honesty policy, truthfulness, no-lying rule
+
+**Marked Override**:
+A claim the candidate insisted on that its linked Profile Atoms don't support, rendered after a single warning and recorded in the CV Data File with no atom links and an explicit user-insisted marker. Quarantined from the Candidate Profile: it lives and dies with its one CV and is reported, never blocked, by verification. Same-document mechanics — hidden text and kin — can never be overridden.
+_Avoid_: exception, waiver, consent flag
 
 **Market Conventions**:
 The data table of CV norms per target market — photo, date of birth, page length, section order, language. Consulted per CV rather than baked into a template.
@@ -71,7 +79,7 @@ Turning a CV Data File into the final PDF by compiling the shipped Typst templat
 _Avoid_: compilation, export, building
 
 **CV Data File**:
-The JSON document holding one tailored CV's content and nothing else — no markup, no layout. The sole artifact the agent writes at render time; the template reads it. The boundary that makes the Single-Flow Rule enforceable rather than merely instructed.
+The JSON document holding one tailored CV's content and nothing else — no markup, no layout — plus per-claim provenance (Profile Atom ids, any Marked Override) that the template never renders. The sole artifact the agent writes at render time; the template reads it. The boundary that makes the Single-Flow Rule enforceable rather than merely instructed.
 _Avoid_: template data, CV JSON, payload
 
 **Single-Flow Rule**:
