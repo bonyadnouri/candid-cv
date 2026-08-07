@@ -1,5 +1,7 @@
 # Map: the candid-cv skill
 
+> **⚠️ MIGRATED 2026-08-07 — the tracker now lives on GitHub.** The map is [issue #15](https://github.com/bonyadnouri/candid-cv/issues/15); tickets are its sub-issues `#1`–`#14` (same numbers as the files in `issues/`). This file and `issues/` are a frozen archive of the state at migration — do not work from them.
+
 > **Named 2026-08-05: `candid-cv`** (was the working title `topcv`). *Candid* and *candidate* are the same word — Latin *candidus*, "white", from the white togas Roman office-seekers wore — so the name carries both "honest" and "about the candidate", which is precisely the skill's differentiator. Free on npm, no trademark exposure, matches the kebab-case convention of neighbouring skills. The old name was dropped because [topcv.com](https://topcv.com/) is an actively-trading commercial CV service asserting trademark rights over "TopCV".
 >
 > The scratch directory keeps its `topcv-skill` path to avoid breaking cross-file links; only the product name changed.
