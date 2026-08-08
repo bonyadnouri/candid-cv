@@ -2,6 +2,15 @@
 
 Ticket: `.scratch/topcv-skill/issues/02-market-conventions.md`
 
+> ⚠️ **Partly superseded.** [market-conventions-gaps.md](./market-conventions-gaps.md)
+> (ticket 20) closed the gaps this pass left open and **overturns several
+> conclusions below** — most importantly that no primary source resolves the
+> French photo question (one exists, and has since 2016), and that Austrian and
+> Swiss conventions can be read off the German row (they diverge on photo, on
+> personal data, and on whether the CV is signed at all). Where the two documents
+> disagree, the later one wins. This pass ran out of WebSearch budget partway
+> through and said so; the later one had budget.
+
 Status: **COMPLETE**, with stated gaps.
 
 - **US / UK / wider-EU:** complete, primary-sourced (EEOC, gov.uk, ACAS, GDPR, Purdue OWL). The strongest part of this document.
