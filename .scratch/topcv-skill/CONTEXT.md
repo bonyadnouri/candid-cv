@@ -19,7 +19,7 @@ One span of the career within the Candidate Profile — a role, project, degree,
 _Avoid_: position, experience item, section
 
 **Profile Atom**:
-A single independently-selectable fact within an Entry — one achievement, one responsibility, one competence — held as raw prose plus tags for what it demonstrates, optionally the candidate's verbatim words and an evidence pointer. Numbers and uncertainty live in the wording of the fact itself, and a skill may appear on a CV only if atoms demonstrate it.
+A single independently-selectable fact within an Entry — one achievement, one responsibility, one competence — held as raw prose plus tags for what it demonstrates, optionally the candidate's verbatim words and an evidence pointer. Numbers and uncertainty live in the wording of the fact itself, and a skill may appear on a CV only if atoms demonstrate it. Mutable in place by Amendment, and identified by a slug that stays stable across it, so a CV already generated is never retroactively invalidated.
 _Avoid_: bullet, entry, item
 
 **Competence Atom**:
@@ -27,8 +27,12 @@ A Profile Atom recording sustained everyday use of a tool or practice rather tha
 _Avoid_: skill entry, proficiency
 
 **Profile Home**:
-The `~/.candid-cv/` directory that owns all candidate PII — the Candidate Profile and every generated output. The structural privacy boundary: PII-bearing writes never land anywhere else.
+The `~/.candid-cv/` directory that owns all candidate PII — the Candidate Profile and every generated output. The structural privacy boundary: PII-bearing writes never land anywhere else. Its `entries/` directory is exactly the load set, so archiving an Entry is moving its file out; nothing is ever dropped from loading on the skill's initiative.
 _Avoid_: data directory, plugin data, storage
+
+**No-Ratchet Boundary**:
+The read/write contract that keeps generated CVs out of the Candidate Profile by construction rather than by rule: the skill that writes the profile cannot read where CVs are written, and the skill that writes CVs reaches the profile only through Elicitation. Makes three otherwise-instructional guarantees structural — a generated CV can never be re-ingested, a Marked Override's quarantine cannot leak, and a fight already fought is genuinely re-fought next time rather than helpfully remembered. Does not catch the human path, where a candidate internalizes their own CV's framing and offers it back as memory; that is named as a limitation rather than defended, because catching it would mean interrogating a candidate about their own recollection.
+_Avoid_: profile isolation, write barrier, no-feedback rule
 
 **Job Ad**:
 The specific posting a CV is being generated against. Distinct from the Employer, which it may or may not name.
@@ -55,8 +59,8 @@ An unstructured monologue — spoken or typed — in which the candidate rambles
 _Avoid_: ramble, brain dump, monologue, transcript
 
 **Interview**:
-The session that fills gaps Ingestion left in the Candidate Profile — a Memo, then a Structural Pass, then candidate-driven depth with no completion target. Not to be confused with a job interview.
-_Avoid_: grilling, questionnaire, intake
+The session that fills gaps Ingestion left in the Candidate Profile — a Memo, then a Structural Pass, then candidate-driven depth with no completion target. Re-entered rather than repeated: there is no separate update mode, so returning after a year and resuming an interrupted session are the same path, with the returning Memo anchored on the profile's own newest date rather than on when the file was last touched. Not to be confused with a job interview.
+_Avoid_: grilling, questionnaire, intake, update session
 
 **Mirror Rule**:
 The constraint on question cards: a card may only offer options the candidate already supplied — in a Memo, an ingested Document, or an earlier answer — never options the skill invented. Navigation and meta questions are exempt, because their answers never become facts. The reason is that a card cannot distinguish a true maximum from an agreeable one, so an invented option laundered into a Profile Atom would satisfy provenance while recording the skill's suggestion as the candidate's memory. The card-shaped counterpart of Elicitation discipline.
@@ -73,6 +77,10 @@ _Avoid_: completeness, coverage, profile score
 **Elicitation**:
 A single open question asked mid-flow — during Tailoring or verification — that mints a new Profile Atom instead of guessing: asking for a number, a role's real scope, a missing competence. Open means never proposing the answer, so the atom records the candidate's memory rather than the agent's anchor; the answer lands in the profile before any CV cites it.
 _Avoid_: follow-up question, clarification, probing
+
+**Amendment**:
+Changing a fact the Candidate Profile already holds, in place and without history — the counterpart to Elicitation, which adds facts rather than revising them. A Profile Atom's prose changes only when the candidate addresses it directly, never on the skill's inference and never in wording the skill proposed; an Entry's skeleton facts may also be set from what the candidate's own words entail, with any residual ambiguity falling to the Structural Pass. Amended prose re-stamps the atom's source to the interview and takes the candidate's words as its quote, so an ingested atom stops reading as a gap the moment it is corrected. Deletion is Amendment's limit case: permitted on explicit instruction, never suggested.
+_Avoid_: edit, revision, correction, update
 
 **Tailoring**:
 Producing the content of one CV by decomposing the Job Ad into a Requirements Sheet, selecting Profile Atoms against it, and rephrasing them within the Honest Optimization rule.
