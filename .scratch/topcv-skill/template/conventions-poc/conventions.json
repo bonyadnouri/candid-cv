@@ -27,6 +27,7 @@
   },
   "headings": {
     "en": {
+      "document_noun": "CV",
       "profile": "Profile",
       "experience": "Experience",
       "education": "Education",
@@ -34,10 +35,10 @@
       "certifications": "Certifications",
       "languages": "Languages",
       "publications": "Publications",
-      "portfolio": "Portfolio",
-      "document": "CV"
+      "portfolio": "Portfolio"
     },
     "de": {
+      "document_noun": "Lebenslauf",
       "profile": "Profil",
       "experience": "Berufserfahrung",
       "education": "Ausbildung",
@@ -45,8 +46,7 @@
       "certifications": "Zertifikate",
       "languages": "Sprachen",
       "publications": "Publikationen",
-      "portfolio": "Portfolio",
-      "document": "Lebenslauf"
+      "portfolio": "Portfolio"
     }
   },
   "markets": {

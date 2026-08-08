@@ -34,7 +34,7 @@ exercised by the compile. It resolves the same way section order does — the
 language supplies a default, a market overrides it:
 
 ```
-m.at("document_noun", default: headings[lang].document)
+m.at("document_noun", default: headings[lang].document_noun)
 ```
 
 | market + language | noun |
