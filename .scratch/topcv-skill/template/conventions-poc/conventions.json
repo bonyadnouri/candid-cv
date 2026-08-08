@@ -34,7 +34,8 @@
       "certifications": "Certifications",
       "languages": "Languages",
       "publications": "Publications",
-      "portfolio": "Portfolio"
+      "portfolio": "Portfolio",
+      "document": "CV"
     },
     "de": {
       "profile": "Profil",
@@ -44,7 +45,8 @@
       "certifications": "Zertifikate",
       "languages": "Sprachen",
       "publications": "Publikationen",
-      "portfolio": "Portfolio"
+      "portfolio": "Portfolio",
+      "document": "Lebenslauf"
     }
   },
   "markets": {
@@ -64,8 +66,15 @@
           "tier": "secondary",
           "action": "state",
           "note": "The one-page norm is convention repeated across advice sites; no survey-grade source was reached."
+        },
+        "summary": {
+          "tier": "none",
+          "action": "state",
+          "note": "The US split on summary value is well known in advice writing; no survey-grade source was reached."
         }
-      }
+      },
+      "summary": "optional",
+      "document_noun": "Resume"
     },
     "UK": {
       "paper": "a4",
@@ -88,8 +97,14 @@
           "tier": "secondary",
           "action": "state",
           "note": "National Careers Service states no length at all. Two pages is a widely-converged custom without survey backing."
+        },
+        "summary": {
+          "tier": "none",
+          "action": "state",
+          "note": "National Careers Service frames it as a light \"introduction\", not a profile paragraph; no evidence on whether it helps."
         }
-      }
+      },
+      "summary": "optional"
     },
     "DE": {
       "paper": "a4",
@@ -117,8 +132,14 @@
           "tier": "none",
           "action": "state",
           "note": "German address granularity was not researched; city only is the conservative choice."
+        },
+        "summary": {
+          "tier": "none",
+          "action": "state",
+          "note": "The Lebenslauf tradition was not researched on this point."
         }
-      }
+      },
+      "summary": "optional"
     },
     "AT": {
       "paper": "a4",
@@ -146,8 +167,14 @@
           "tier": "none",
           "action": "ask",
           "note": "Applied from the German row, itself an unresearched gap."
+        },
+        "summary": {
+          "tier": "none",
+          "action": "state",
+          "note": "Applied from the German row, itself unresearched on this point."
         }
-      }
+      },
+      "summary": "optional"
     },
     "CH": {
       "paper": "a4",
@@ -175,8 +202,14 @@
           "tier": "none",
           "action": "ask",
           "note": "Applied from the German row, itself an unresearched gap."
+        },
+        "summary": {
+          "tier": "none",
+          "action": "state",
+          "note": "Applied from the German row, itself unresearched on this point."
         }
-      }
+      },
+      "summary": "optional"
     }
   },
   "default": {
@@ -196,7 +229,8 @@
         "action": "state",
         "note": "No researched row exists for this market. These are neutral least-harm values, not local conventions."
       }
-    }
+    },
+    "summary": "optional"
   },
   "unsupported": {
     "JP": "Japanese domestic hiring expects a rirekisho (a standardised form with an affixed photo) plus a separate shokumu keirekisho for work history. That is a different document in kind, not a variant of this one. Override if the employer has asked for a Western CV."

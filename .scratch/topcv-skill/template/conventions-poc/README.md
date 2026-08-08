@@ -27,6 +27,24 @@ no `DE-en` row anywhere in the table.
 `poppler == pypdf == pdfminer` on every output; `Role · Employer · dates` stays
 paired and umlauts survive, so the schema change costs nothing at the text layer.
 
+## The document noun
+
+`document_noun` is filename-bearing (ticket 19) and never rendered, so it isn't
+exercised by the compile. It resolves the same way section order does — the
+language supplies a default, a market overrides it:
+
+```
+m.at("document_noun", default: headings[lang].document)
+```
+
+| market + language | noun |
+|---|---|
+| US + en | **Resume** *(the only market override)* |
+| UK + en | CV |
+| DE + de | Lebenslauf |
+| DE + en | **CV** — an English CV for a German employer is not a Lebenslauf |
+| PL + en *(default row)* | CV |
+
 ## Two constraints measured here, not assumed
 
 1. **`conventions.json` must sit beside `cv.typ`.** Typst rejects
