@@ -264,6 +264,6 @@
     "summary": "optional"
   },
   "unsupported": {
-    "JP": "Japanese domestic hiring expects a rirekisho (a standardised form with an affixed photo) plus a separate shokumu keirekisho for work history. That is a different document in kind, not a variant of this one. Override if the employer has asked for a Western CV."
+    "JP": "Japanese domestic hiring expects a rirekisho plus a separate shokumu keirekisho for work history. The JIS form was withdrawn in July 2020 and the current authority is the MHLW's own 履歴書様式例 (2021) — which is still a fixed form, and still carries a 写真をはる位置 box instructing the candidate to glue a photo to the reverse. That is a different document in kind, not a variant of this one. Override if the employer has asked for a Western CV."
   }
 }

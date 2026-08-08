@@ -750,6 +750,70 @@ from a public body and cut against §4:
 
 ---
 
+## 6b. Further `unsupported` markets — Japan verified, Korea examined and declined
+
+**The boundary test**, sharpened: a market belongs on `unsupported` when the
+reader's expected document is **a fixed form the candidate fills in rather than a
+document they write**, or is organised on different pillars. Carrying a photo, a
+date of birth or a marital status does **not** qualify — those are row values the
+table already models, and treating them as different-in-kind would put half of
+continental Europe on the list.
+
+**Japan survives verification, and is now primary-sourced rather than asserted.**
+The JIS form was withdrawn: 令和2年7月 (July 2020), 日本規格協会 removed the
+rirekisho 様式例 from the JIS commentary. MHLW then issued its own — the
+**厚生労働省履歴書様式例** (April 2021) — and its stated changes are that
+性別 (sex) becomes an optional free-text field, and four fields are **removed
+outright**: 通勤時間 (commute time), 扶養家族数 (dependants), 配偶者 (spouse),
+配偶者の扶養義務 (spousal support obligation). **primary**, MHLW PDF downloaded and
+extracted: <https://kouseisaiyou.mhlw.go.jp/assets/pdf/methods/04.pdf>
+
+Decisively for the entry, **the form is still a form, and the photo is still
+physically affixed.** The 2021 様式例 retains a 写真をはる位置 ("position to affix
+the photo") box, with instructions 「本人単身胸から上」 (subject alone, chest up)
+and 「裏面のりづけ」 (glue the reverse). A document with a glue-the-photo-here box
+is not a variant of a Typst-rendered CV. The `unsupported` entry stands; only its
+sourcing improves, and the note should now cite MHLW's form rather than JIS, which
+no longer exists.
+
+**South Korea was examined closely and is deliberately NOT added** — the most
+interesting result in this section, because the law moved the document *toward* a
+Western CV rather than away.
+
+**채용절차의 공정화에 관한 법률 (Act on Fair Hiring Procedures) Article 4-3**,
+*출신지역 등 개인정보 요구 금지*, in force **17 July 2019**, prohibits an employer
+from requiring on the application: 용모·키·체중 등의 신체적 조건 (appearance,
+height, weight), 출신지역 (birthplace), 혼인여부 (marital status), 재산 (wealth),
+and the 학력·직업·재산 of parents and siblings — with a fine of up to ₩5m. It binds
+**구인자 (the employer)**, not the candidate, and applies to private employers with
+30+ employees. That list is almost exactly the set of fields that made the
+traditional 이력서 distinctive.
+
+Two things stop this becoming an `unsupported` entry, and they pull opposite ways:
+
+- Korea's Ministry of Employment and Labor manual (12 July 2019) preserves
+  **ID-style photographs for identity verification**, so the photo has not gone.
+- The companion **자기소개서** (self-introduction essay) persists alongside the
+  이력서, which is genuinely a second document rather than a CV section.
+
+But no primary source establishes that Korean domestic hiring *requires* a fixed
+form the way MHLW's rirekisho does — the Korean standard form is recommended, not
+mandated, and the 2019 Act pushes toward free-form. **Korea is therefore a variant
+with unusual personal-data norms plus a companion document, not a different
+document in kind.** Recorded here rather than shipped, with the reasoning, so the
+next pass does not have to re-derive it.
+
+**Everything else in this section is unestablished, not cleared.** China, India,
+Brazil, the Gulf states, the Nordics, Poland, Spain and Italy were not reached at
+primary-source depth in this pass. They take the `default` row, which says plainly
+that no researched row exists — which is the correct behaviour for a market nobody
+has researched, and is why the absence is tolerable.
+
+**`unsupported` therefore ships unchanged at one entry: JP.** That is now a
+researched conclusion rather than an unexamined default.
+
+---
+
 ## 7. Findings that are design changes, not content — flagged, not decided
 
 Three findings would change decided behaviour or extend the schema. Per the
