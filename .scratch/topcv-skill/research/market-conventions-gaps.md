@@ -752,29 +752,84 @@ from a public body and cut against §4:
 
 ## 6b. Further `unsupported` markets — Japan verified, Korea examined and declined
 
-**The boundary test**, sharpened: a market belongs on `unsupported` when the
-reader's expected document is **a fixed form the candidate fills in rather than a
-document they write**, or is organised on different pillars. Carrying a photo, a
-date of birth or a marital status does **not** qualify — those are row values the
-table already models, and treating them as different-in-kind would put half of
-continental Europe on the list.
+### The boundary test — three gates, all of which must pass
+
+The obvious test — *"a fixed form the candidate fills rather than a document they
+write, or organised on different pillars"* — **over-fires and under-specifies**.
+"Different pillars" is too weak: a Dutch and a German CV differ in pillars and are
+both variants. "Fixed form" catches every public-sector recruitment portal on
+earth, including the US, India and China. Replaced with three gates:
+
+1. **Scope — is it the *screening* document?** Only the artifact the reader opens
+   to decide whether to interview. Onboarding paperwork, notarised civil-status
+   forms and post-offer packets are out of scope however standardised.
+2. **Whose form is it — the market's or the employer's?** A form imposed by the
+   *market* (every employer in the country expects the same artifact) is a market
+   fact. A form imposed by one employer or portal (USAJOBS, UPSC, a chaebol career
+   site, any ATS) is an **employer** fact. The table is keyed by country, so only
+   market-imposed forms can live on a country-keyed list. **This gate is
+   load-bearing** — it is what stops the axis collapsing, and it is the principled
+   reason the US federal résumé does not belong (§6c).
+3. **Can one generic CV stand in for the whole expected submission?** Not "is it
+   identical", but: can the tool's output be handed over as the thing the reader
+   asked for? If the submission is a *set* whose other member cannot be produced by
+   re-sectioning CV data, no.
+
+In one line: **`unsupported` is for markets where the screening submission is a
+market-standard form, or a set containing one, that the candidate fills rather than
+writes — so no rearrangement of CV data produces it.**
+
+Carrying a photo, a date of birth or a marital status does **not** qualify. Those
+are row values the table already models, and treating them as different-in-kind
+would put half of continental Europe on the list.
 
 **Japan survives verification, and is now primary-sourced rather than asserted.**
-The JIS form was withdrawn: 令和2年7月 (July 2020), 日本規格協会 removed the
-rirekisho 様式例 from the JIS commentary. MHLW then issued its own — the
-**厚生労働省履歴書様式例** (April 2021) — and its stated changes are that
-性別 (sex) becomes an optional free-text field, and four fields are **removed
-outright**: 通勤時間 (commute time), 扶養家族数 (dependants), 配偶者 (spouse),
-配偶者の扶養義務 (spousal support obligation). **primary**, MHLW PDF downloaded and
-extracted: <https://kouseisaiyou.mhlw.go.jp/assets/pdf/methods/04.pdf>
 
-Decisively for the entry, **the form is still a form, and the photo is still
-physically affixed.** The 2021 様式例 retains a 写真をはる位置 ("position to affix
-the photo") box, with instructions 「本人単身胸から上」 (subject alone, chest up)
-and 「裏面のりづけ」 (glue the reverse). A document with a glue-the-photo-here box
-is not a variant of a Typst-rendered CV. The `unsupported` entry stands; only its
-sourcing improves, and the note should now cite MHLW's form rather than JIS, which
-no longer exists.
+**Precision that matters: JIS Z 8303 was not abolished.** What was removed, in
+令和2年7月 (July 2020), is the **rirekisho form example from the standard's
+commentary** (解説の様式例) — and MHLW's own paper to the Labour Policy Council
+records the trigger: a petition from an LGBT support organisation asking for the
+sex field to be reconsidered, after which 「ＪＩＳ規格の履歴書の様式例全体が削除
+された」. MHLW then issued its own **厚生労働省履歴書様式例** (April 2021), making
+性別 an optional free-text field and **removing four fields outright**: 通勤時間,
+扶養家族数, 配偶者, 配偶者の扶養義務. MHLW is explicit that it carries
+**「法的拘束力はない」** — no binding legal force; each firm decides.
+**primary** — <https://www.mhlw.go.jp/content/11601000/000769679.pdf> and
+<https://kouseisaiyou.mhlw.go.jp/assets/pdf/methods/04.pdf>, both downloaded.
+
+**MHLW recommends its form in the present tense today** (「厚生労働省履歴書様式例」
+を推奨しています), and points high-school hiring at a *second* standardised form —
+the **全国高等学校統一応募用紙**, agreed between MHLW, MEXT and the National
+Association of High School Principals. That second form is market-imposed in the
+strictest sense and strengthens the entry beyond the rirekisho case alone.
+**primary** — <https://kouseisaiyou.mhlw.go.jp/methods.html>
+
+Decisively for gate 3, **the form is still a form and the photo is still
+physically affixed**: the 様式例 retains a 写真をはる位置 box (縦36〜40mm ×
+横24〜30mm, 本人単身胸から上, 裏面のりづけ), and Hello Work spells out the physical
+act — 「はがれないように、のりでしっかり貼り付けます。セロハンテープによる貼り付けは
+不可です」. A document with a glue-the-photo-here box, and a rule against using
+tape, is not a variant of a Typst-rendered CV.
+
+**And the failure is precisely half a submission.** Hello Work's current pamphlet
+describes the companion 職務経歴書 as 「A4縦サイズ1〜2枚程度…自由様式」 — free
+format, A4, one to two pages, work history plus 活かせる能力 and 自己PR. **That is
+approximately what this tool already produces.** The rirekisho is the part the tool
+cannot produce, and it is the part that is 一般的. Shipping a CV into Japan would
+deliver the half the employer did not ask about.
+
+**Two premises to drop, both of which the sources contradict:**
+
+- **"Historically handwritten" should not carry the entry.** Hello Work says the
+  opposite: 「今は「手書きでもパソコンでも構わない」とする企業が多い」, and it
+  actively recommends typing for IT and foreign-capital employers. The entry rests
+  on **the form**, not the pen.
+- **"Foreign-capital employers take Western CVs" is not established**, and the
+  evidence points the other way — MHLW treats foreign-capital firms as a
+  *formatting* variation (西暦 rather than 和暦), and named Japanese recruiters
+  describe those employers wanting *both* a Japanese 職務経歴書 and an English CV.
+  The override is still right; its justification should narrow to "some employers —
+  foreign-capital, IT, senior mid-career — accept a free-format document."
 
 **South Korea was examined closely and is deliberately NOT added** — the most
 interesting result in this section, because the law moved the document *toward* a
@@ -803,14 +858,71 @@ with unusual personal-data norms plus a companion document, not a different
 document in kind.** Recorded here rather than shipped, with the reasoning, so the
 next pass does not have to re-derive it.
 
-**Everything else in this section is unestablished, not cleared.** China, India,
-Brazil, the Gulf states, the Nordics, Poland, Spain and Italy were not reached at
-primary-source depth in this pass. They take the `default` row, which says plainly
-that no researched row exists — which is the correct behaviour for a market nobody
-has researched, and is why the absence is tolerable.
+**China — a variant, and checked at statute level.** The Employment Promotion Law's
+fair-employment chapter (Arts. 26–31) is purely anti-discrimination and
+**prescribes nothing about application documents** — no form, no format, no
+required fields. MOHRSS's own jobseeker guidance frames the applicant's duty as
+*content-truthfulness* (「应当如实提供本人基本信息…」), not form-compliance. The
+简历 is candidate-authored; the photo and personal details are convention, which is
+a row value. **primary**, both fetched. PIPL was **not** established as removing
+fields from the 简历 — consent-form practice exists, but no primary source connects
+it to the document, so it is not asserted.
+
+**Vietnam is the one genuine near-miss, and it fails on gate 1.** Vietnam does have
+a market-standard fixed form — the **sơ yếu lý lịch tự thuật**: a printed form with
+a 4×6 photo and family particulars, filled by hand, with the signature certified at
+the commune People's Committee (the certification machinery is documented in MOJ
+công văn 1520/HTQTCT-CT and 873/HTQTCT-CT, which instruct authorities to certify
+*only the declarant's signature*). But it is submitted as part of the hồ sơ **after
+initial selection** — the *screening* document is a normal CV. Recorded as a
+**watch item**: if this tool ever widens from "the screening document" to "the
+application packet", Vietnam is the first market to revisit, and would need
+Vietnamese-language primary research not done here.
+
+**Everything else was confirmed as a variant or is unestablished, not cleared.**
+The Netherlands, Nordics, Poland, Spain and Italy are confirmed variants only at EU
+level, via Europass — national employment-service guidance was not fetched
+individually, which is the honest limit of that finding. Russia's state portal is a
+résumé database, not a prescribed form. India is a variant for private-sector
+hiring; the circulating claim that Indian "biodata" carries caste and religion was
+traced to a CV-builder marketing page and is **not** relied on. Brazil and the Gulf
+states are **unestablished** — absence of a prescribed form is a fair read of those
+ministries' scope, but no positive primary source describes their CV conventions.
+All of these take the `default` row, which says plainly that no researched row
+exists — the correct behaviour for an unresearched market, and why the absence is
+tolerable.
 
 **`unsupported` therefore ships unchanged at one entry: JP.** That is now a
 researched conclusion rather than an unexamined default.
+
+### 6c. Why the US federal résumé is *two* answers, not one
+
+Asked whether US-federal is (a) different in kind, (b) a variant, or (c) a category
+the axis cannot express, the answer is **(b) and (c), and they must not be merged**.
+
+**As a document it is a variant, and the structured-fields argument does not
+survive.** USAJOBS requires per role: employer, title, start/end dates to
+month precision, **hours worked per week**, task descriptions pitched at the
+announcement's level, and series-and-grade *for federal jobs only*. It bans SSN,
+**photos**, and age/sex/religious affiliation. (Salary and supervisor contact are
+**optional profile-builder fields, not résumé requirements** — worth stating,
+because they are usually cited as defining features.) Every one of those is
+expressible as a row value. And with the length now inverted (§5), the artifact is
+**closer to a standard CV than the shipped US row is** — short, reverse-
+chronological, candidate-authored, no photo. **primary**, fetched.
+
+**As a category it is real, and its axis is employer class, not market.** Gate 2
+disposes of it for this list: USAJOBS is one employer's portal, not the US market,
+and the US is a shipped row — a US-federal entry would make the country key mean
+two things. But the underlying pattern recurs everywhere: public-sector recruitment
+is form-based in **every** market examined — USAJOBS, India's UPSC/SSC/RRB, China's
+国考 registration, and Korea explicitly carving 공무원 채용 out of its fair-hiring
+Act. The axis that expresses this is **public sector / regulated portal / private**,
+orthogonal to market.
+
+**Recommendation: do nothing about it now.** Nothing in the current `unsupported`
+shape is *wrong*; it is silent on a dimension it was never meant to carry. This is
+a design change, so it is flagged in §7 rather than decided.
 
 ---
 
@@ -828,8 +940,12 @@ ticket's own instruction, they are recorded rather than resolved:
 2. **`length_rule: hard` has a real user, but it is not a market.** USAJOBS is a
    *hiring system* within a market whose general row is advisory. The `unsupported`
    and `markets` maps are both keyed by country, so US-federal cannot be expressed
-   without either a new axis or a synthetic market code. Note this is the same
-   shape of problem as §5's Swiss language question and is worth deciding once.
+   without either a new axis or a synthetic market code. §6c names the axis it
+   would actually need — **employer class** (public sector / regulated portal /
+   private), orthogonal to market — and shows the pattern is not US-specific:
+   public-sector recruitment is form-based in every market examined. The
+   recommendation from the research is **do nothing now**: nothing currently shipped
+   is wrong, the table is merely silent on a dimension it was never meant to carry.
 3. **The `summary` column's definition is unstated.** `expected | optional |
    discouraged` was shipped without saying whether it describes *guidance* or
    *outcomes*, and the answer flips UK and FR between two values. Definition first,
