@@ -94,12 +94,20 @@ _Avoid_: optimization, customization, generation
 The decomposed demand model of one Job Ad — requirements marked core or peripheral with the ad's own labels authoritative, plus vocabulary targets, and source-attributed research amendments. The only channel through which company research reaches Tailoring; it never touches atoms, bullets, or voice. Persists in the Application Folder, because it is the sole durable record of what the research pass found and a later run would not reproduce it.
 _Avoid_: keyword list, ad analysis, job spec
 
+**Research Pass**:
+The bounded stage of Tailoring that reads public material about the Employer and the role, and lands its findings solely as source-attributed amendments to the Requirements Sheet. Consumes Grounding rather than establishing it — it never identifies, infers or confirms an Employer — so a Staffing Agency posting is never researched against a guessed one. Which of its agents run, and whether either runs at all, follows from Grounding alone. Its agents cannot see the Candidate Profile, which is what makes "demand side only" structural rather than instructed. Producing zero amendments is a legal, reported outcome.
+_Avoid_: company research, enrichment, background check
+
+**Employer Footprint**:
+The public material an Employer authored about itself — its site, engineering blog, documentation, code repositories, and its own other live Job Ads — and the only admissible source class for employer-territory amendments. Third-party characterization is excluded by definition: what a review site or aggregator says about an employer is not the employer speaking. Age constrains what a source may claim, because stack facts rot and the way a company names things does not.
+_Avoid_: company profile, public data, web presence
+
 **Candidate Register**:
 The per-candidate voice profile derived from Profile Atoms' quotes and the candidate's own prose — vocabulary ceiling, directness, rhythm — that all generated CV prose is drafted inside. The test: could the candidate say the sentence aloud in an interview. Quotes calibrate it; they are never pasted.
 _Avoid_: tone, style guide, house style
 
 **Editor's Note**:
-The compact report accompanying each rendered CV — selection highlights, justified exclusions of the candidate's real material, and any carried overrides. Never a fit verdict, and never a repeat of the gap question. Persists as a file in the Application Folder and is rewritten on every re-render, so it can never describe a CV that is no longer there. It earns its file by holding the one thing the CV Data File structurally cannot: what was left out, and why.
+The compact report accompanying each rendered CV — selection highlights, justified exclusions of the candidate's real material, and any carried overrides. Never a fit verdict, and never a repeat of the gap question. Also carries the Research Pass's single line — the amendments that changed a pick or a word, each with source and date, or the one flat line saying nothing was found or nothing changed. Persists as a file in the Application Folder and is rewritten on every re-render, so it can never describe a CV that is no longer there. It earns its file by holding the one thing the CV Data File structurally cannot: what was left out, and why.
 _Avoid_: rationale dump, gap report, change summary
 
 **Grounding**:
