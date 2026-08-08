@@ -75,8 +75,20 @@ A single open question asked mid-flow — during Tailoring or verification — t
 _Avoid_: follow-up question, clarification, probing
 
 **Tailoring**:
-Producing the content of one CV by selecting Profile Atoms against a Job Ad and rephrasing them within the Honest Optimization rule.
+Producing the content of one CV by decomposing the Job Ad into a Requirements Sheet, selecting Profile Atoms against it, and rephrasing them within the Honest Optimization rule.
 _Avoid_: optimization, customization, generation
+
+**Requirements Sheet**:
+The decomposed demand model of one Job Ad — requirements marked core or peripheral with the ad's own labels authoritative, plus vocabulary targets, and source-attributed research amendments. The only channel through which company research reaches Tailoring; it never touches atoms, bullets, or voice.
+_Avoid_: keyword list, ad analysis, job spec
+
+**Candidate Register**:
+The per-candidate voice profile derived from Profile Atoms' quotes and the candidate's own prose — vocabulary ceiling, directness, rhythm — that all generated CV prose is drafted inside. The test: could the candidate say the sentence aloud in an interview. Quotes calibrate it; they are never pasted.
+_Avoid_: tone, style guide, house style
+
+**Editor's Note**:
+The compact report accompanying each rendered CV — selection highlights, justified exclusions of the candidate's real material, and any carried overrides. Never a fit verdict, and never a repeat of the gap question.
+_Avoid_: rationale dump, gap report, change summary
 
 **Honest Optimization**:
 The governing constraint: selection and framing may be optimized, facts may not be invented or inflated. Every claim on a generated CV must be supported by its linked Profile Atoms at the claim's strongest natural reading — or carry a Marked Override — and the rendered document says the same thing to every reader, human or machine. On a too-weak atom the only moves are weakening the claim, Elicitation, or a Marked Override. Boundary settled by *What exactly does "honest optimization" forbid?*
