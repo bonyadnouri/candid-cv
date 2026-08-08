@@ -39,7 +39,7 @@ The read/write contract that keeps generated CVs out of the Candidate Profile by
 _Avoid_: profile isolation, write barrier, no-feedback rule
 
 **Job Ad**:
-The specific posting a CV is being generated against. Distinct from the Employer, which it may or may not name.
+The specific posting a CV is being generated against. Distinct from the Employer, which it may or may not name. Only ever what the candidate hands over — pasted, as a file, or as a screenshot. The skill never fetches one, so an ad it could not read is an ad it does not have. Its text is kept verbatim in the Application Folder, because postings get taken down.
 _Avoid_: job description, JD, listing, posting
 
 **Parked Job Ad**:
@@ -47,11 +47,11 @@ A Job Ad held across the first-run handoff — saved when a candidate asks for a
 _Avoid_: pending job, queued ad, saved request
 
 **Employer**:
-The organization the candidate would actually work for. Deliberately distinct from whoever *posted* the Job Ad, which may be a staffing agency.
+The organization the candidate would actually work for. Deliberately distinct from whoever *posted* the Job Ad, which may be a Staffing Agency. Established from the ad or from the candidate, never from the skill's own inference — an employer the skill merely suspects is not an Employer, and is treated as unknown.
 _Avoid_: company, client
 
 **Staffing Agency**:
-A recruiter or agency that posts a Job Ad on an Employer's behalf, usually without naming them. Detecting one matters because researching the agency produces confidently wrong context.
+A recruiter or agency that posts a Job Ad on an Employer's behalf, usually without naming them. Never a research target: researching the agency yields confident, well-sourced, entirely irrelevant context, which is the kind that survives into a finished CV unnoticed. Where one is suspected, the candidate is asked before any research runs.
 _Avoid_: recruiter, headhunter, intermediary
 
 **Ingestion**:
@@ -101,6 +101,10 @@ _Avoid_: tone, style guide, house style
 **Editor's Note**:
 The compact report accompanying each rendered CV — selection highlights, justified exclusions of the candidate's real material, and any carried overrides. Never a fit verdict, and never a repeat of the gap question. Persists as a file in the Application Folder and is rewritten on every re-render, so it can never describe a CV that is no longer there. It earns its file by holding the one thing the CV Data File structurally cannot: what was left out, and why.
 _Avoid_: rationale dump, gap report, change summary
+
+**Grounding**:
+What a round of Tailoring actually had to work from, on two independent axes — whether the Job Ad's text was supplied, and whether the Employer was established. Stated to the candidate on delivery, never printed on the CV. Weak Grounding is not dishonest, only less useful: Honest Optimization governs the claims on the page, not how well-targeted their selection was. `ungrounded` names the weakest case, where neither axis is present.
+_Avoid_: confidence, disclaimer, provenance, fidelity
 
 **Honest Optimization**:
 The governing constraint: selection and framing may be optimized, facts may not be invented or inflated. Every claim on a generated CV must be supported by its linked Profile Atoms at the claim's strongest natural reading — or carry a Marked Override — and the rendered document says the same thing to every reader, human or machine. On a too-weak atom the only moves are weakening the claim, Elicitation, or a Marked Override. Boundary settled by *What exactly does "honest optimization" forbid?*
