@@ -30,6 +30,10 @@ _Avoid_: skill entry, proficiency
 The `~/.candid-cv/` directory that owns all candidate PII — the Candidate Profile and every generated output. The structural privacy boundary: PII-bearing writes never land anywhere else. Its `entries/` directory is exactly the load set, so archiving an Entry is moving its file out; nothing is ever dropped from loading on the skill's initiative.
 _Avoid_: data directory, plugin data, storage
 
+**Application Folder**:
+One directory under the Profile Home holding everything a single application produced — the Job Ad as supplied, the Requirements Sheet, the CV Data File, the Editor's Note, and the PDF. Named for the date of the Tailoring run plus employer and role, and created only once a CV has actually rendered, so a folder exists exactly when a real application does. Its name is the whole of the skill's record-keeping: no index, no status, no pruning, and re-running an application overwrites it rather than versioning it, because knowing which generation was sent would be the tracking this skill deliberately does not do.
+_Avoid_: application record, output directory, run folder
+
 **No-Ratchet Boundary**:
 The read/write contract that keeps generated CVs out of the Candidate Profile by construction rather than by rule: the skill that writes the profile cannot read where CVs are written, and the skill that writes CVs reaches the profile only through Elicitation. Makes three otherwise-instructional guarantees structural — a generated CV can never be re-ingested, a Marked Override's quarantine cannot leak, and a fight already fought is genuinely re-fought next time rather than helpfully remembered. Does not catch the human path, where a candidate internalizes their own CV's framing and offers it back as memory; that is named as a limitation rather than defended, because catching it would mean interrogating a candidate about their own recollection.
 _Avoid_: profile isolation, write barrier, no-feedback rule
@@ -87,7 +91,7 @@ Producing the content of one CV by decomposing the Job Ad into a Requirements Sh
 _Avoid_: optimization, customization, generation
 
 **Requirements Sheet**:
-The decomposed demand model of one Job Ad — requirements marked core or peripheral with the ad's own labels authoritative, plus vocabulary targets, and source-attributed research amendments. The only channel through which company research reaches Tailoring; it never touches atoms, bullets, or voice.
+The decomposed demand model of one Job Ad — requirements marked core or peripheral with the ad's own labels authoritative, plus vocabulary targets, and source-attributed research amendments. The only channel through which company research reaches Tailoring; it never touches atoms, bullets, or voice. Persists in the Application Folder, because it is the sole durable record of what the research pass found and a later run would not reproduce it.
 _Avoid_: keyword list, ad analysis, job spec
 
 **Candidate Register**:
@@ -95,7 +99,7 @@ The per-candidate voice profile derived from Profile Atoms' quotes and the candi
 _Avoid_: tone, style guide, house style
 
 **Editor's Note**:
-The compact report accompanying each rendered CV — selection highlights, justified exclusions of the candidate's real material, and any carried overrides. Never a fit verdict, and never a repeat of the gap question.
+The compact report accompanying each rendered CV — selection highlights, justified exclusions of the candidate's real material, and any carried overrides. Never a fit verdict, and never a repeat of the gap question. Persists as a file in the Application Folder and is rewritten on every re-render, so it can never describe a CV that is no longer there. It earns its file by holding the one thing the CV Data File structurally cannot: what was left out, and why.
 _Avoid_: rationale dump, gap report, change summary
 
 **Honest Optimization**:
@@ -115,7 +119,7 @@ Turning a CV Data File into the final PDF by compiling the shipped Typst templat
 _Avoid_: compilation, export, building
 
 **CV Data File**:
-The JSON document holding one tailored CV's content and nothing else — no markup, no layout — plus per-claim provenance (Profile Atom ids, any Marked Override) that the template never renders. The sole artifact the agent writes at render time; the template reads it. The boundary that makes the Single-Flow Rule enforceable rather than merely instructed.
+The JSON document holding one tailored CV's content — no markup, no layout — plus per-claim provenance (Profile Atom ids, any Marked Override) and a stamp of the versions that rendered it, none of which the template renders. The sole input to Rendering, and the only thing the agent writes that becomes the document; the other files in the Application Folder are read by people, never by the template. The boundary that makes the Single-Flow Rule enforceable rather than merely instructed. Also the fixed point of iteration — edits mutate it and re-render — though it buys no byte-identical regeneration later, since the template, the renderer and the available fonts all drift; the stamp exists so that drift is announced rather than silent.
 _Avoid_: template data, CV JSON, payload
 
 **Single-Flow Rule**:
