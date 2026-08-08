@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "_sources": "research/market-conventions.md — full citations and confidence live there, not here.",
+  "orders": {
+    "established": [
+      "profile",
+      "experience",
+      "education",
+      "skills",
+      "certifications",
+      "languages",
+      "publications",
+      "portfolio",
+      "additional"
+    ],
+    "early_career": [
+      "profile",
+      "education",
+      "experience",
+      "skills",
+      "certifications",
+      "languages",
+      "publications",
+      "portfolio",
+      "additional"
+    ]
+  },
+  "headings": {
+    "en": {
+      "profile": "Profile",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "languages": "Languages",
+      "publications": "Publications",
+      "portfolio": "Portfolio"
+    },
+    "de": {
+      "profile": "Profil",
+      "experience": "Berufserfahrung",
+      "education": "Ausbildung",
+      "skills": "Kompetenzen",
+      "certifications": "Zertifikate",
+      "languages": "Sprachen",
+      "publications": "Publikationen",
+      "portfolio": "Portfolio"
+    }
+  },
+  "markets": {
+    "US": {
+      "paper": "us-letter",
+      "photo": "harmful",
+      "dob": "omit",
+      "address": "city",
+      "page_target": {
+        "established": 2,
+        "early_career": 1
+      },
+      "length_rule": "advisory",
+      "default_language": "en",
+      "caveats": {
+        "page_target": {
+          "tier": "secondary",
+          "action": "state",
+          "note": "The one-page norm is convention repeated across advice sites; no survey-grade source was reached."
+        }
+      }
+    },
+    "UK": {
+      "paper": "a4",
+      "photo": "harmful",
+      "dob": "omit",
+      "address": "city",
+      "page_target": {
+        "established": 2,
+        "early_career": 1
+      },
+      "length_rule": "advisory",
+      "default_language": "en",
+      "caveats": {
+        "photo": {
+          "tier": "secondary",
+          "action": "ask",
+          "note": "No UK statute bans a CV photo. ACAS requires equality-monitoring data be kept separate from the CV, which is what produces the norm — but the claim that recruiters discard photo CVs has no primary source."
+        },
+        "page_target": {
+          "tier": "secondary",
+          "action": "state",
+          "note": "National Careers Service states no length at all. Two pages is a widely-converged custom without survey backing."
+        }
+      }
+    },
+    "DE": {
+      "paper": "a4",
+      "photo": "expected",
+      "dob": "optional",
+      "address": "city",
+      "page_target": {
+        "established": 2,
+        "early_career": 2
+      },
+      "length_rule": "advisory",
+      "default_language": "de",
+      "caveats": {
+        "photo": {
+          "tier": "secondary",
+          "action": "ask",
+          "note": "Legally optional under the AGG, and an employer may not require one — but the Lebenslauf tradition held. Sources report ~19% of recruiters discard photo-less applications; that figure is SEO-tier and was not traceable to a disclosed methodology."
+        },
+        "dob": {
+          "tier": "none",
+          "action": "ask",
+          "note": "German conventions on date of birth were flagged as an unresearched gap by the research pass."
+        },
+        "address": {
+          "tier": "none",
+          "action": "state",
+          "note": "German address granularity was not researched; city only is the conservative choice."
+        }
+      }
+    },
+    "AT": {
+      "paper": "a4",
+      "photo": "expected",
+      "dob": "optional",
+      "address": "city",
+      "page_target": {
+        "established": 2,
+        "early_career": 2
+      },
+      "length_rule": "advisory",
+      "default_language": "de",
+      "caveats": {
+        "_row": {
+          "tier": "none",
+          "action": "state",
+          "note": "Austria was not separated from Germany in the research; German conventions are being applied."
+        },
+        "photo": {
+          "tier": "secondary",
+          "action": "ask",
+          "note": "Applied from the German row. The AGG is German law and does not govern Austria; the practice norm is assumed, not established."
+        },
+        "dob": {
+          "tier": "none",
+          "action": "ask",
+          "note": "Applied from the German row, itself an unresearched gap."
+        }
+      }
+    },
+    "CH": {
+      "paper": "a4",
+      "photo": "expected",
+      "dob": "optional",
+      "address": "city",
+      "page_target": {
+        "established": 2,
+        "early_career": 2
+      },
+      "length_rule": "advisory",
+      "default_language": "de",
+      "caveats": {
+        "_row": {
+          "tier": "none",
+          "action": "state",
+          "note": "Switzerland was not separated from Germany in the research, and is multilingual — the German default_language is wrong for Romandy and Ticino. The ad's language should normally decide."
+        },
+        "photo": {
+          "tier": "secondary",
+          "action": "ask",
+          "note": "Applied from the German row; not established for Switzerland."
+        },
+        "dob": {
+          "tier": "none",
+          "action": "ask",
+          "note": "Applied from the German row, itself an unresearched gap."
+        }
+      }
+    }
+  },
+  "default": {
+    "paper": "a4",
+    "photo": "neutral",
+    "dob": "omit",
+    "address": "city_country",
+    "page_target": {
+      "established": 2,
+      "early_career": 2
+    },
+    "length_rule": "advisory",
+    "default_language": null,
+    "caveats": {
+      "_row": {
+        "tier": "none",
+        "action": "state",
+        "note": "No researched row exists for this market. These are neutral least-harm values, not local conventions."
+      }
+    }
+  },
+  "unsupported": {
+    "JP": "Japanese domestic hiring expects a rirekisho (a standardised form with an affixed photo) plus a separate shokumu keirekisho for work history. That is a different document in kind, not a variant of this one. Override if the employer has asked for a Western CV."
+  }
+}
