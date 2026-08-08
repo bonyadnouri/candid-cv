@@ -47,12 +47,28 @@ A recruiter or agency that posts a Job Ad on an Employer's behalf, usually witho
 _Avoid_: recruiter, headhunter, intermediary
 
 **Ingestion**:
-Seeding a Candidate Profile from material the candidate already has — an existing CV, a LinkedIn export, a GitHub profile — extracting facts while deliberately discarding the source's framing.
+Seeding a Candidate Profile from material the candidate supplies, through either of two channels — a **Document** (an existing CV, a LinkedIn export, a GitHub profile), whose facts are kept and whose framing is deliberately discarded, or a **Memo**. Document ingestion is date-rich and voice-poor; a Memo is the inverse, so the channels complement rather than replace each other. A CV this skill generated is never re-ingested.
 _Avoid_: import, parsing, onboarding
 
+**Memo**:
+An unstructured monologue — spoken or typed — in which the candidate rambles about their work for as long as they like, which the skill structures into Entries and Profile Atoms. Cannot carry the framing problem a Document does, because it is already the candidate's own words, and so is the natural source of `quote` fields. Dictation reliably corrupts the highest-value tokens (tool names, proper nouns, figures), which the Structural Pass repairs by asking, never by proposing.
+_Avoid_: ramble, brain dump, monologue, transcript
+
 **Interview**:
-The conversational session that fills gaps Ingestion left in the Candidate Profile. Not to be confused with a job interview.
+The session that fills gaps Ingestion left in the Candidate Profile — a Memo, then a Structural Pass, then candidate-driven depth with no completion target. Not to be confused with a job interview.
 _Avoid_: grilling, questionnaire, intake
+
+**Mirror Rule**:
+The constraint on question cards: a card may only offer options the candidate already supplied — in a Memo, an ingested Document, or an earlier answer — never options the skill invented. Navigation and meta questions are exempt, because their answers never become facts. The reason is that a card cannot distinguish a true maximum from an agreeable one, so an invented option laundered into a Profile Atom would satisfy provenance while recording the skill's suggestion as the candidate's memory. The card-shaped counterpart of Elicitation discipline.
+_Avoid_: multiple choice policy, no-cards rule, question UI rule
+
+**Structural Pass**:
+The one mandatory batch of questions after a Memo, covering only render-blocking facts — dates per Entry, Entry boundaries, dictation-corrupted proper nouns, whether a degree completed. Roughly two minutes. Everything after it is the candidate's to drive.
+_Avoid_: onboarding questions, required fields, intake form
+
+**Renderability Floor**:
+The single threshold the Interview recognises: an Identity Block, plus at least one Entry with dates and one Profile Atom, is enough to generate a CV. Stated once, plainly, after which the skill never pushes for more. Deliberately not a completeness measure — a career has no 100%, so no coverage target or progress bar is offered.
+_Avoid_: completeness, coverage, profile score
 
 **Elicitation**:
 A single open question asked mid-flow — during Tailoring or verification — that mints a new Profile Atom instead of guessing: asking for a number, a role's real scope, a missing competence. Open means never proposing the answer, so the atom records the candidate's memory rather than the agent's anchor; the answer lands in the profile before any CV cites it.
