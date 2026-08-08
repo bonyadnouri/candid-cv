@@ -115,8 +115,20 @@ A claim the candidate insisted on that its linked Profile Atoms don't support, r
 _Avoid_: exception, waiver, consent flag
 
 **Market Conventions**:
-The data table of CV norms per target market — photo, date of birth, page length, section order, language. Consulted per CV rather than baked into a template.
+The table of CV norms shipped beside the template and read by both it and the agent, on two axes — **Market** and language — so that applying in one market in another's language costs no extra row. Behavioural values are closed enums, never prose; prose exists only to explain a value to the candidate and is never acted on. Consulted per CV rather than baked into a template.
 _Avoid_: locale settings, regional rules, style guide
+
+**Market**:
+The hiring market a CV is aimed at, resolved from where the role is worked rather than where the Employer is headquartered — a Berlin role is read by Berlin readers whatever the parent company. Never the Staffing Agency's country. Distinct from the CV's language, which the Job Ad's own wording governs; a market with no researched row is served by neutral defaults that say so rather than by silence.
+_Avoid_: locale, region, country, territory
+
+**Caveat**:
+A per-field admission in the Market Conventions that a value is weakly evidenced or guessed — absent wherever the value is primary-sourced, so only weak values pay for themselves. Carries what to do about it: surface the uncertainty to the candidate once and keep their answer, or simply say so. The mechanism that lets the table ship an honest guess instead of choosing between a confident fabrication and an unhelpful silence.
+_Avoid_: confidence score, footnote, disclaimer
+
+**Document Noun**:
+What the document is called in the reader's world — a CV, a Resume, a Lebenslauf. Follows the language it is written in, except where a Market overrides it. Never appears in the rendered document; it names the file that leaves the machine, which is the one artifact an Employer sees before opening anything.
+_Avoid_: title, doc type, filename
 
 **Rendering**:
 Turning a CV Data File into the final PDF by compiling the shipped Typst template against it. Settled by *Which renderer, and one template or many?* — Typst is the only renderer, and the template is never regenerated.
