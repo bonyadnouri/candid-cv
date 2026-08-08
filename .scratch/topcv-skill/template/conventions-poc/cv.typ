@@ -17,7 +17,12 @@
 #show heading.where(level: 2): it => [
   #v(0.8em * tight)#smallcaps(it.body)#v(-0.4em)#line(length: 100%, stroke: 0.5pt)
 ]
-#let section(title, body) = [== #title
+// An empty heading string means the section renders UNLABELLED — sourced, not a
+// convenience: French guidance describes the top-of-CV accroche as a block with
+// no heading of its own (ONISEP, France Travail). Single-Flow is unaffected.
+#let section(title, body) = if title == "" [
+  #v(0.4em)#body
+] else [== #title
 #body]
 
 // ── Header — photo and DOB are GATED BY THE TABLE, not by the agent ───────

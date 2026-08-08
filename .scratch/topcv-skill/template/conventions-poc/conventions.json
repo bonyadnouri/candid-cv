@@ -41,11 +41,22 @@
       "document_noun": "Lebenslauf",
       "profile": "Profil",
       "experience": "Berufserfahrung",
-      "education": "Ausbildung",
-      "skills": "Kompetenzen",
-      "certifications": "Zertifikate",
+      "education": "Ausbildung und Studium",
+      "skills": "Kenntnisse",
+      "certifications": "Weiterbildungen",
       "languages": "Sprachen",
       "publications": "Publikationen",
+      "portfolio": "Portfolio"
+    },
+    "fr": {
+      "document_noun": "CV",
+      "profile": "",
+      "experience": "Expérience professionnelle",
+      "education": "Formations",
+      "skills": "Compétences",
+      "certifications": "Certifications",
+      "languages": "Langues",
+      "publications": "Publications",
       "portfolio": "Portfolio"
     }
   },
@@ -110,7 +121,7 @@
       "paper": "a4",
       "photo": "expected",
       "dob": "optional",
-      "address": "city",
+      "address": "full",
       "page_target": {
         "established": 2,
         "early_career": 2
@@ -119,24 +130,19 @@
       "default_language": "de",
       "caveats": {
         "photo": {
-          "tier": "secondary",
+          "tier": "primary",
           "action": "ask",
-          "note": "Legally optional under the AGG, and an employer may not require one — but the Lebenslauf tradition held. Sources report ~19% of recruiters discard photo-less applications; that figure is SEO-tier and was not traceable to a disclosed methodology."
+          "note": "Legally optional under the AGG, and an employer may not require one — but the Lebenslauf tradition held: the Bundesagentur für Arbeit's own templates carry a photo box marked 'keine Pflicht'. The often-quoted ~19% discard figure remains untraceable to any disclosed methodology and is not relied on."
         },
         "dob": {
-          "tier": "none",
+          "tier": "primary",
           "action": "ask",
-          "note": "German conventions on date of birth were flagged as an unresearched gap by the research pass."
-        },
-        "address": {
-          "tier": "none",
-          "action": "state",
-          "note": "German address granularity was not researched; city only is the conservative choice."
+          "note": "Customary, never required. All four Bundesagentur templates carry a Geburtsdatum and all ten samples in its May 2026 guide use one — but that guide's own structural prose omits it, so the convention is drifting. BAG 8 AZR 418/15 found asking age is not by itself an Indiz under §22 AGG."
         },
         "summary": {
-          "tier": "none",
+          "tier": "primary",
           "action": "state",
-          "note": "The Lebenslauf tradition was not researched on this point."
+          "note": "Researched, and the answer is a split: the Bundesagentur places the Kurzprofil on the optional Deckblatt rather than in the Lebenslauf, while its regional 2026 guide recommends one at the top of the CV. No outcome evidence exists in any market."
         }
       },
       "summary": "optional"
@@ -145,7 +151,7 @@
       "paper": "a4",
       "photo": "expected",
       "dob": "optional",
-      "address": "city",
+      "address": "full",
       "page_target": {
         "established": 2,
         "early_career": 2
@@ -153,25 +159,20 @@
       "length_rule": "advisory",
       "default_language": "de",
       "caveats": {
-        "_row": {
-          "tier": "none",
-          "action": "state",
-          "note": "Austria was not separated from Germany in the research; German conventions are being applied."
-        },
         "photo": {
-          "tier": "secondary",
+          "tier": "primary",
           "action": "ask",
-          "note": "Applied from the German row. The AGG is German law and does not govern Austria; the practice norm is assumed, not established."
+          "note": "The AMS states a photo 'gilt in Österreich als Standard und wird daher von den Personalverantwortlichen erwartet'. Note this is the employment service's guidance, not law: the Gleichbehandlungsgesetz contains no photo provision at all, and the equality ombuds body flags photos as a documented bias vector without advising against them."
         },
-        "dob": {
-          "tier": "none",
-          "action": "ask",
-          "note": "Applied from the German row, itself an unresearched gap."
+        "page_target": {
+          "tier": "primary",
+          "action": "state",
+          "note": "The AMS states a two-page maximum three separate ways, including imperatively. It is guidance rather than an enforced limit, so it stays advisory — but it is the strongest length evidence in the table."
         },
         "summary": {
           "tier": "none",
           "action": "state",
-          "note": "Applied from the German row, itself unresearched on this point."
+          "note": "Not addressed by the AMS. No outcome evidence exists in any market."
         }
       },
       "summary": "optional"
@@ -179,34 +180,64 @@
     "CH": {
       "paper": "a4",
       "photo": "expected",
-      "dob": "optional",
-      "address": "city",
+      "dob": "expected",
+      "address": "full",
       "page_target": {
         "established": 2,
         "early_career": 2
       },
       "length_rule": "advisory",
-      "default_language": "de",
+      "default_language": null,
       "caveats": {
-        "_row": {
-          "tier": "none",
-          "action": "state",
-          "note": "Switzerland was not separated from Germany in the research, and is multilingual — the German default_language is wrong for Romandy and Ticino. The ad's language should normally decide."
+        "default_language": {
+          "tier": "primary",
+          "action": "ask",
+          "note": "Switzerland has four national languages and the cantons set their own (BV Art. 4, 70). There is no federal definition of the language regions — the BFS assigns them by majority at municipality level, so canton-level inference fails outright: Fribourg and Murten sit in one canton on opposite sides of the line, and bilingual Biel/Bienne is assigned German on a 53/40 split. Null deliberately: the ad's own language decides, and we ask when it cannot."
         },
         "photo": {
-          "tier": "secondary",
+          "tier": "primary",
           "action": "ask",
-          "note": "Applied from the German row; not established for Switzerland."
+          "note": "Canton Vaud's official guidance calls a photo 'usuellement exigée' and Canton Bern lists one among the marks of a good CV; the federal SECO page is softer ('gegebenenfalls'). Note the adult-audience Swiss sources are cantonal — the national portal's CV pages address apprenticeship seekers."
         },
-        "dob": {
-          "tier": "none",
-          "action": "ask",
-          "note": "Applied from the German row, itself an unresearched gap."
+        "page_target": {
+          "tier": "primary",
+          "action": "state",
+          "note": "Three official sources give three numbers — SECO 'nicht mehr als drei Seiten', Bern '2-3', Vaud '1 à 2' — and the spread follows the language border. Two is the only figure all three permit."
         },
         "summary": {
           "tier": "none",
           "action": "state",
-          "note": "Applied from the German row, itself unresearched on this point."
+          "note": "Not addressed by any Swiss source reached. No outcome evidence exists in any market."
+        }
+      },
+      "summary": "optional"
+    },
+    "FR": {
+      "paper": "a4",
+      "photo": "neutral",
+      "dob": "omit",
+      "address": "city",
+      "page_target": {
+        "established": 1,
+        "early_career": 1
+      },
+      "length_rule": "advisory",
+      "default_language": "fr",
+      "caveats": {
+        "photo": {
+          "tier": "primary",
+          "action": "ask",
+          "note": "Neither expected nor harmful. The Défenseur des droits has recommended since 2016 that employers not require a photo and 'ne pas écarter un CV qui ne comporterait pas de photographie sur ce seul motif' — an acknowledgement that photo-less CVs were being rejected. France Travail leaves it to the candidate. Default off is supported; the stronger claim that including one is a mistake is not."
+        },
+        "default_language": {
+          "tier": "none",
+          "action": "state",
+          "note": "Inferred, not sourced. No French institution addresses the language of a CV. L5331-4 bars foreign-language job advertisements for work performed in France, which constrains the employer's ad rather than the candidate's CV."
+        },
+        "summary": {
+          "tier": "primary",
+          "action": "state",
+          "note": "France Travail instructs an 'accroche' — objective plus key skills — at the top of the CV. Shipped optional only because the column's meaning (guidance versus outcomes) is undecided; on a guidance reading France would be expected."
         }
       },
       "summary": "optional"
